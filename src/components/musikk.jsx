@@ -71,7 +71,7 @@ export default function MusicPlayer() {
 
   return (
     <div className="rounded-2xl shadow-xl border-4 border-amber-700 p-6 text-center w-[340px] sm:w-[400px] text-amber-200 font-serif transition-all">
-      <h2 className="text-2xl mb-3 font-bold text-amber-300 drop-shadow-lg tracking-widest">
+      <h2 className="text-2xl mb-3 font-bold text-amber-300 drop-shadow-lg tracking-widest font-lotr">
         🎵 Songs of the Middle Earth
       </h2>
 
