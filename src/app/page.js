@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import MusicPlayer from "../components/musikk";
-import Translator from "../components/Oversetter";
+import MusicPlayer from "@/components/musikk";
+import Translator from "@/components/Oversetter";
 
 
 export default function Home() {
