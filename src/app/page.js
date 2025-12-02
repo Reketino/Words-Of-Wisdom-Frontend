@@ -36,7 +36,7 @@ export default function Home() {
   pt-32 pb-10 gap-32">
 
   <h1 className="text-[12rem]  font-lotr text-yellow-300 drop-shadow-2xl text-center mt-240">
-    Reketino's Words Of Wisdom
+    Reketino&apos;s Words Of Wisdom
   </h1>
 
   <section className="
