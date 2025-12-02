@@ -13,5 +13,11 @@
 body {
   background-color: #000;
   color: #fff;
-  font-family: 'LOTR', serif;
+  font-family: serif;
+}
+
+@layer base {
+  .font-lotr {
+    font-family: 'LOTR', serif;
+  }
 }

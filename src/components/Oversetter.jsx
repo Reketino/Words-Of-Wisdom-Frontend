@@ -29,7 +29,7 @@ export default function Translator({ quote }) {
   };
 
   return (
-    <div className="mt-4">
+    <main className="mt-4">
       <select
         value={language}
         onChange={(e) => setLanguage(e.target.value)}
@@ -67,10 +67,11 @@ export default function Translator({ quote }) {
       >
         {loading ? "Translating..." : "Translate"}
       </button>
-
+      <section className="mt-2 min-h-[2rem] w-full">
       {translated && (
         <p className="mt-2 italic text-yellow-100">{translated}</p>
       )}
-    </div>
+    </section>
+    </main>
   );
 }
