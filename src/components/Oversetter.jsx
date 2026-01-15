@@ -33,8 +33,13 @@ export default function Translator({ quote }) {
       <select
         value={language}
         onChange={(e) => setLanguage(e.target.value)}
-        className="bg-black/70 text-yellow-200 border border-yellow-700 px-2 py-1 rounded-lg mr-2 shadow-lg backdrop-blur-sm focus:ring-2 focus:ring-yellow-500"
-      >
+        className="
+        bg-black/70 text-yellow-200 
+        border border-yellow-700 px-2 py-1 
+        rounded-lg mr-2 
+        shadow-lg backdrop-blur-sm 
+        focus:ring-2 focus:ring-yellow-500
+        ">
         <option className="bg-yellow-400 text-white" value="no">
           Norwegian
         </option>
@@ -63,13 +68,23 @@ export default function Translator({ quote }) {
 
       <button
         onClick={translateQuote}
-        className="bg-yellow-700 hover:bg-amber-800  text-white px-3 py-1 rounded"
-      >
+        className="
+        bg-yellow-700 
+        hover:bg-amber-800  
+        text-white 
+        px-3 py-1 
+        rounded
+        ">
         {loading ? "Translating..." : "Translate"}
       </button>
       <section className="mt-2 min-h-[2rem] w-full">
       {translated && (
-        <p className="mt-2 italic text-yellow-100">{translated}</p>
+        <p className="
+        mt-2 italic 
+        text-yellow-100
+        ">
+          {translated}
+        </p>
       )}
     </section>
     </main>
