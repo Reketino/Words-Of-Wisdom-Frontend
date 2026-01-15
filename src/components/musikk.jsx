@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef, useTransition } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function MusicPlayer() {
   const tracks = ["/music/song1.mp3", "/music/song2.mp3", "/music/song3.mp3"];
