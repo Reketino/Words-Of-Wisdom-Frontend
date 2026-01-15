@@ -21,3 +21,14 @@ body {
     font-family: 'LOTR', serif;
   }
 }
+
+
+/* Styling on footer */
+.footer-styling {
+   @apply w-full h-14 
+    flex items-center 
+    justify-center 
+    text-yellow-300 
+    bg-white/10 backdrop-blur-xl 
+    shadow-[0_-4px_20px_rgba(255,255,255,0.15)]
+}
