@@ -70,7 +70,7 @@ export default function MusicPlayer() {
   }, [current]);
 
   return (
-    <div className="
+    <main className="
     rounded-2xl shadow-xl border-4  p-6  
     w-[340px] sm:w-[400px] 
     border-amber-700 
@@ -89,12 +89,13 @@ export default function MusicPlayer() {
 
       <audio ref={audioRef} src={tracks[current]} onEnded={handleEnded} />
 
-      <div className="bg-black/50 p-4 rounded-xl flex items-center gap-4">
+      <section className="bg-black/50 p-4 rounded-xl flex items-center gap-4">
         <div className="flex-1 h-2 bg-yellow-700 rounded-full">
           <div
             className="h-2 bg-yellow-300 rounded-full"
             style={{ width: `${progress}%` }}
-          ></div>
+          >
+          </div>
         </div>
 
         <span className="text-yellow-200 text-sm">
@@ -112,7 +113,7 @@ export default function MusicPlayer() {
           }}
           className="w-24 accent-yellow-400"
         />
-      </div>
+      </section>
 
       <p className="text-lg italic my-4">
         Track {current + 1} of {tracks.length}
@@ -153,6 +154,6 @@ export default function MusicPlayer() {
           ▶ Next Song
         </button>
       </div>
-    </div>
+    </main>
   );
 }
