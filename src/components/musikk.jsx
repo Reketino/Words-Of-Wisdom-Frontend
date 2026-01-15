@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useTransition } from "react";
 
 export default function MusicPlayer() {
   const tracks = ["/music/song1.mp3", "/music/song2.mp3", "/music/song3.mp3"];
@@ -70,8 +70,20 @@ export default function MusicPlayer() {
   }, [current]);
 
   return (
-    <div className="rounded-2xl shadow-xl border-4 border-amber-700 p-6 text-center w-[340px] sm:w-[400px] text-amber-200 font-serif transition-all">
-      <h2 className="text-2xl mb-3 font-bold text-amber-300 drop-shadow-lg tracking-widest font-lotr">
+    <div className="
+    rounded-2xl shadow-xl border-4  p-6  
+    w-[340px] sm:w-[400px] 
+    border-amber-700 
+    text-center text-amber-200 
+    font-serif 
+    transition-all
+    ">
+      <h2 className="
+      text-2xl mb-3 
+      font-bold text-amber-300 
+      drop-shadow-lg tracking-widest 
+      font-lotr
+      ">
         🎵 Songs of the Middle Earth
       </h2>
 
@@ -109,14 +121,34 @@ export default function MusicPlayer() {
       <div className="flex justify-center gap-4 mt-4">
         <button
           onClick={togglePlay}
-          className="px-6 py-2 rounded-full bg-amber-700 hover:bg-amber-800 transition-all shadow-md hover:shadow-amber-500/30 border border-amber-500 font-semibold"
-        >
+          className="
+          px-6 py-2 rounded-full 
+          bg-amber-700 hover:bg-amber-800 
+          hover:shadow-amber-500/30 
+          border border-amber-500
+          transition-all shadow-md  
+          font-semibold
+          ">
           {isPlaying ? "⏸ Pause" : "▶ Play"}
         </button>
 
         <button
-          onClick={() => setCurrent((current + 1) % tracks.length)}
-          className="px-6 py-2 rounded-full bg-amber-700 hover:bg-amber-800 transition-all shadow-md hover:shadow-amber-500/30 border border-amber-500 font-semibold"
+          onClick={() => {
+            if (isFading) return;
+            setIsFading(true);
+              setTimeout(() => {
+              setCurrent((prev) => (prev + 1) % tracks.length);
+              setIsFading(false);
+            }, 300);
+          }}
+          className="
+          px-6 py-2 rounded-full 
+          bg-amber-700 hover:bg-amber-800 
+          transition-all 
+          shadow-md hover:shadow-amber-500/30 
+          border border-amber-500 
+          font-semibold
+          "
         >
           ▶ Next Song
         </button>
